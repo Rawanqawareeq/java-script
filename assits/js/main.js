@@ -6,7 +6,9 @@ const homeTask = document.querySelector(".task-list");
 const listOfTask =[];
 let flagName = false;
 let flagDate = false;
-
+document.querySelector('.all').addEventListener('click', () => displayTasks('all'));
+document.querySelector('.completed').addEventListener('click', () => displayTasks('completed'));
+document.querySelector('.pending').addEventListener('click', () => displayTasks('pending'));
 form.addEventListener('submit',(e)=>{
      e.preventDefault();
      const task = e.target.elements;
@@ -81,9 +83,6 @@ function displayTasks(filter = 'all'){
       homeList.appendChild(span);
       homeList.appendChild(btnRemove);
       homeTask.appendChild(homeList);
-      document.querySelector('.all').addEventListener('click', () => displayTasks('all'));
-      document.querySelector('.completed').addEventListener('click', () => displayTasks('completed'));
-      document.querySelector('.pending').addEventListener('click', () => displayTasks('pending'));
     });
     
 }

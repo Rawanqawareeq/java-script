@@ -3,144 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
-.Homework_Management {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
-    background-color: #f4f4f4;
-}
-
-.Homework_Management h1 {
-    text-align: center;
-    padding: 10px 0;
-    color: rgb(18, 104, 18);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.container {
-    width: 80%;
-    max-width: 900px;
+.container{
     margin: auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    width: calc(80%);
 }
-
-.home-taskform {
+.home-management form ,.input-group {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
-
-.home-taskform input[type="text"],
-.home-taskform input[type="date"] {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 45px;
-    font-size: 1rem;
-}
-
-.home-taskform .p-task,
-.home-taskform .p-date {
+.error{
+    display: inline-block;
     color: red;
-    font-size: 0.9rem;
+}
+.d-none{
     display: none;
-}
-
-form {
-    justify-content: center;
-    border: 2px solid rgb(18, 104, 18);
-    border-radius: 8px;
-    padding: 30px;
-    background-color: #f9f9f9;
-}
-
-form .input_group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.btn {
-    display: flex;
-    gap: 15px;
-    padding: 15px 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-button {
-    font-size: 1rem;
-    color: white;
-    background-color: rgb(18, 104, 18);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: rgb(15, 89, 15);
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 1rem;
-}
-
-.homeTask_list .completed span {
-    text-decoration: line-through;
-    color: gray;
-}
-
-.submit {
-    background-color: rgb(18, 104, 18);
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 4px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.submit:hover {
-    background-color: rgb(15, 89, 15);
-}
-
-.task_list {
-    padding: 20px 0;
-    width: 100%;
-}
-
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-    }
-
-    .home-taskform input[type="text"],
-    .home-taskform input[type="date"] {
-        width: 100%;
-    }
-
-    li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }

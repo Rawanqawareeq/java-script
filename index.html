@@ -7,40 +7,43 @@
     <link rel="stylesheet" href="assits/css/style.css">
 </head>
 <body>
-    <section class="Homework_Management">
-        <div class="container">
-            <h1> WELCOME TO HAME TASK Management</h1>
-            <form class="home-taskform">
-                
-                <div class="input_group">
-                    <label for="Date-task" >Home task Date</label>
-                    <input type="date"  name="task-date" id="Date-task">
-                    <p class="p-date"></p>
-                </div>
-                
-                
-                <input type="submit" class="submit" value="Add Homework Task">
-    
-            </form>
-            <div class="task_list">
-                <h2>Home List Task</h2>
-                <div class="btn">
-                    <button class="all">all</button>
-                    <button class="completed">complete</button>
-                    <button class="pending">pendding</button>
-                </div>
-                <ul class="homeTask_list">
-                    
-                </ul>
+  <section class="home-management">
+    <div class="container">
+        <h1>Welcome to Hame Task Management</h1>
+        <form class="home-taskform">
+            <div class="input-group">
+                <label for="task-name">Task Name</label>
+                <input type="text"  name="task-name" id="task-name">
+                <p class="task-name-error d-none"></p>
             </div>
-            <div>
-               
-           
-                </div>
+            <div class="input-group">
+                <label for="task-date">Date Task</label>
+                <input type="date" name="task-date"  id="task-date">
+                <p class="task-date-error d-none"></p>
+              
             </div>
+            <div class="input-group">
+              
+                <input type="submit"  value="Add Task"  >
+            </div>
+            
+        </form>
+        <div class="tasks">
+            <h1>List of Task</h1>
+            <div class="btn">
+                <button class="all">all</button>
+                <button class="completed">complete</button>
+                <button class="pending">pendding</button>
+            </div>
+            <ul class="task-list">
+                
+            </ul>
+
         </div>
 
-    </section>
+    </div>
+     
+  </section>
     <script src="assits/js/main.js"></script>
 </body>
 </html>

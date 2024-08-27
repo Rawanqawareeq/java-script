@@ -72,7 +72,7 @@ function displayTasks(filter = 'all'){
       span.textContent = `${element.TaskName} ${element.dateTask.toISOString().split("T")[0]}`
       const btnRemove = document.createElement('button');
       btnRemove.textContent = "Remove";
-      btnRemove.className = "btn_Remove";
+      btnRemove.className = "btn-remove";
       btnRemove.addEventListener('click',()=>{
          listOfTask.splice(index,1);
          displayTasks(filter = 'all');

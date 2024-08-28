@@ -4,8 +4,7 @@ const errorDate = document.querySelector('.task-date-error');
 const homeTask = document.querySelector(".task-list");
 
 const listOfTask =[];
-let flagName = false;
-let flagDate = false;
+
 document.querySelector('.all').addEventListener('click', () => displayTasks('all'));
 document.querySelector('.completed').addEventListener('click', () => displayTasks('completed'));
 document.querySelector('.pending').addEventListener('click', () => displayTasks('pending'));
@@ -18,7 +17,7 @@ form.addEventListener('submit',(e)=>{
         errorDate.textContent = "Date is expired";
         errorDate.classList.add("error");
         errorDate.classList.remove("d-none");
-        flagDate = false;
+        return;
      }
      if(task["task-date"].value == ""){
         errorDate.textContent = "Date is empty";
@@ -30,24 +29,22 @@ form.addEventListener('submit',(e)=>{
         errorName.textContent = "Task is empty";
         errorName.classList.add("error");
         errorName.classList.remove("d-none");
-        flagName = false;
+       return;
      }
      if(task["task-name"].value != ""){
         errorName.classList.remove("error");
         errorName.classList.add("d-none");
-        flagName = true;
      }
      if(task["task-date"].value.trim() != "" && dateTask >= currentDate ){
         errorDate.classList.remove("error");
         errorDate.classList.add("d-none");
-        flagDate = true;
     }
-    if(flagDate && flagName){
+   
         listOfTask.push({TaskName:task["task-name"].value,dateTask,checked:false})
         sortTask();
         task["task-date"].value = "";
         task["task-name"].value="";
-    }
+    
     displayTasks();
 })
 function sortTask(){
